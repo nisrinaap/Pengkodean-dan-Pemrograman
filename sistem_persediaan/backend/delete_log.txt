@@ -1,0 +1,56 @@
+Request received at 2025-03-24 15:37:57
+POST data: Array
+(
+    [id] => 1
+)
+
+Product ID: 1
+Product found: Array
+(
+    [image] => 
+)
+
+No image associated with product.
+Product deleted successfully.
+Request received at 2025-03-24 15:38:03
+POST data: Array
+(
+    [id] => 2
+)
+
+Product ID: 2
+Product found: Array
+(
+    [image] => 
+)
+
+No image associated with product.
+Product deleted successfully.
+Request received at 2025-03-24 15:49:50
+POST data: Array
+(
+    [id] => 3
+)
+
+Product ID: 3
+Product found: Array
+(
+    [image] => 
+)
+
+No image associated with product.
+Product deleted successfully.
+Request received at 2025-03-26 00:59:19
+POST data: Array
+(
+    [id] => 4
+)
+
+Product ID: 4
+Product found: Array
+(
+    [image] => 
+)
+
+No image associated with product.
+Product deleted successfully.

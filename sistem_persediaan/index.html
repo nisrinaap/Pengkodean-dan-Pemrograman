@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>LENTERA</h2>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#" onclick="showSection('products')">Products</a></li>
+                <li><a href="#" onclick="showSection('categories')">Category</a></li>
+                <li><a href="#" onclick="showSection('suppliers')">Supplier</a></li>
+                <li><a href="#" onclick="showSection('customers')">Customer</a></li>
+                <li><a href="#" onclick="showSection('outgoing')">Outgoing</a></li>
+                <li><a href="#" onclick="showSection('purchases')">Purchase Products</a></li>
+                <li><a href="#" onclick="showSection('users')">System Users</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Inventory System</h1>
+                <div class="user-info">Admin</div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="section active">
+                <div class="card">System Users: <span>2</span> <a href="#">More Info</a></div>
+                <div class="card">Category: <span>5</span> <a href="#">More Info</a></div>
+                <div class="card">Product: <span>7</span> <a href="#">More Info</a></div>
+                <div class="card">Customer: <span>6</span> <a href="#">More Info</a></div>
+                <div class="card">Supplier: <span>3</span> <a href="#">More Info</a></div>
+                <div class="card">Total Purchase: <span>4</span> <a href="#">More Info</a></div>
+                <div class="card">Total Outgoing: <span>3</span> <a href="#">More Info</a></div>
+            </div>
+
+            <!-- Products Section -->
+            <div id="products" class="section">
+                <h2>List of Products</h2>
+                <button onclick="showAddProductForm()">Add Product</button>
+                <table id="product-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Image</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list"></tbody>
+                </table>
+
+                <!-- Add Product Form -->
+                <div id="add-product-form" class="form-modal">
+                    <h3>Add New Product</h3>
+                    <div id="form-error" style="color: red; display: none;"></div>
+                    <form id="product-form" enctype="multipart/form-data">
+                        <input type="text" name="name" placeholder="Product Name" required>
+                        <input type="number" name="price" placeholder="Price" required>
+                        <input type="number" name="quantity" placeholder="Quantity" required>
+                        <input type="text" name="category" placeholder="Category" required>
+                        <input type="file" name="image" accept="image/*">
+                        <button type="submit">Add Product</button>
+                        <button type="button" onclick="hideAddProductForm()">Cancel</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Other Sections (Placeholder) -->
+            <div id="categories" class="section"><h2>Categories</h2><p>Manage categories here.</p></div>
+            <div id="suppliers" class="section"><h2>Suppliers</h2><p>Manage suppliers here.</p></div>
+            <div id="customers" class="section"><h2>Customers</h2><p>Manage customers here.</p></div>
+            <div id="outgoing" class="section"><h2>Outgoing</h2><p>Manage outgoing products here.</p></div>
+            <div id="purchases" class="section"><h2>Purchases</h2><p>Manage purchases here.</p></div>
+            <div id="users" class="section"><h2>System Users</h2><p>Manage users here.</p></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
